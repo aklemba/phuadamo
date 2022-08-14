@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import { type PropType } from "vue";
-import { NavId } from "@/components/topNav/TopNav.types";
+import type { NavId } from "@/components/topNav/TopNav.types";
 
-const props = defineProps({
-  id: {
-    type: String as PropType<NavId>,
-    required: true,
-  },
-});
+const props = defineProps<{
+  id: NavId;
+}>();
 </script>
 
 <template>

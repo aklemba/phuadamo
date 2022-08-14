@@ -10,9 +10,7 @@
         <span class="block text-blue-800"> Biuro rachunkowe </span>
       </h1>
 
-      <p class="mt-5 text-2xl opacity-100 mb-6">
-        Kompleksowa obsługa księgowa
-      </p>
+      <p class="mt-5 text-2xl opacity-100 mb-6">Kompleksowa obsługa księgowa</p>
 
       <button
         class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full w-44"

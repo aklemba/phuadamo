@@ -74,7 +74,7 @@ const resize = () => {
     </div>
 
     <small class="rodo text-gray-500">
-      Klikając "Wyślij" wyrażasz zgodę na przetwarzanie Twoich danych osobowych
+      Klikając <i>„Wyślij”</i> wyrażasz zgodę na przetwarzanie Twoich danych osobowych
       w celu udzielenia odpowiedzi na wiadomość.
     </small>
 

@@ -12,7 +12,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
 
   <div class="flex flex-wrap">
     <div class="basis-full md:basis-4/12">
-      <div class="mb-4">
+      <address class="mb-4 not-italic">
         <p class="title mb-3">Kontakt</p>
 
         <div class="item">
@@ -39,7 +39,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
             <p>7:00 - 16:00</p>
           </div>
         </div>
-      </div>
+      </address>
     </div>
 
     <div class="basis-full md:basis-8/12">

@@ -1,9 +1,15 @@
 export const scrollToElement = (id?: string) => {
   if (id) {
-    const el = document.querySelector("#" + id);
+    const element = document.querySelector("#" + id);
 
-    if (el) {
-      el.scrollIntoView({
+    if (element) {
+      const offset = -120; // px (top-bar + spacing)
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + offset;
+
+      window.scrollTo({
+        top: y,
+        left: 0,
         behavior: "smooth",
       });
     }

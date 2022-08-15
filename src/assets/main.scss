@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section-title {
+    @apply font-bold text-4xl mb-5 text-gray-800;
+  }
+
+  .section-subtitle {
+    @apply text-blue-800 font-bold mb-1 block uppercase;
+  }
+}

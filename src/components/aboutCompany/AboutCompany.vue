@@ -4,29 +4,33 @@
   <div>
     <div>
       <header>
-        <span class="text-blue-800 font-bold mb-1 block uppercase">
-          Poznaj nas lepiej!
-        </span>
+        <span class="section-subtitle"> Poznaj nas lepiej! </span>
 
-        <h2 class="font-bold text-4xl mb-5">O firmie</h2>
+        <h2 class="section-title">O firmie</h2>
       </header>
 
       <div class="flex">
         <div class="basis-6/12">
           <p class="paragraph">
-            <b>PHU ADAMO</b> to biuro rachunkowe z wieloletnim doświadczneiem na rynku.
+            <b>PHU ADAMO</b> to biuro rachunkowe z wieloletnim doświadczeniem na
+            rynku.
           </p>
 
           <p class="paragraph">
-            Nasz zespół składa się z doświadczonych i wykwalifikowanych pracowników, rzetelnych i chętnych do pomocy w każdym przypadku.
+            Nasz zespół składa się z doświadczonych i wykwalifikowanych
+            pracowników, rzetelnych i chętnych do pomocy w każdym przypadku.
           </p>
 
           <p class="paragraph">
-            Biuro znajduje się w Bełchowie i świadczy specjalistyczną obsługę rachunkowo-podatkową dla małych i średnich firm, a także dla jednoosobowych działalności gospodarczych.
+            Biuro znajduje się w Bełchowie i świadczy specjalistyczną obsługę
+            rachunkowo-podatkową dla małych i średnich firm, a także dla
+            jednoosobowych działalności gospodarczych.
           </p>
 
           <p class="paragraph">
-            Jeżeli interesuje Państwa nasza obsługa podatkowa i macie wobec niej i naszej działalności pytania, zapraszamy do kontaktu telefonicznego lub mailowego z naszym biurem.
+            Jeżeli interesuje Państwa nasza obsługa podatkowa i macie wobec niej
+            i naszej działalności pytania, zapraszamy do kontaktu telefonicznego
+            lub mailowego z naszym biurem.
           </p>
         </div>
 
@@ -40,6 +44,7 @@
 
 <style scoped lang="scss">
 .paragraph {
+  @apply text-gray-700;
   margin-bottom: 1.5rem;
   line-height: 1.6rem;
 }

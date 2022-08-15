@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import { onMounted } from "vue";
 
 onMounted(() => {
   const gs = gsap.to(".img", {
@@ -100,8 +100,13 @@ onMounted(() => {
   }
 
   &::before {
-    @apply border;
+    @apply border bg-white;
     transform: translate3d(8rem, 0, 0);
+  }
+
+  &::after {
+    @apply border;
+    transform: translate3d(13rem, 3rem, 0);
   }
 }
 </style>

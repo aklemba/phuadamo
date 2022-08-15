@@ -30,7 +30,10 @@
 
 <style scoped lang="scss">
 .footer {
-  @apply bg-gray-100 px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 border-b border-gray-200 text-gray-700;
+  @apply bg-stone-200 border-t px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 border-b border-gray-200 text-gray-700;
   padding: 5rem;
+  // background: #e8e4e4;
+  // background: rgba(200, 188, 170, 0.7);
+  // background: hsla(5, 15%, 80%, 0.7);
 }
 </style>

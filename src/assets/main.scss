@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer components {
+  .section {
+    @apply max-w-6xl mx-auto border bg-white;
+    margin: 8rem auto;
+    padding: 5rem;
+    border-radius: 45px;
+  }
+
   .section-title {
     @apply font-bold text-4xl mb-5 text-gray-800;
   }
@@ -10,4 +17,8 @@
   .section-subtitle {
     @apply text-blue-800 font-bold mb-1 block uppercase;
   }
+}
+
+body {
+  @apply bg-stone-50;
 }

@@ -2,10 +2,11 @@
 import { scrollToElement } from "@/utils/scrollTo";
 import { NavId } from "@/components/topNav/TopNav.types";
 
+import { onMounted } from "vue";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import { onMounted } from "vue";
 
 onMounted(() => {
   const gs = gsap.to(".line", {
@@ -35,14 +36,14 @@ onMounted(() => {
       <h1
         class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
-        <span class="text text-center m-auto ">
+        <span class="text text-center m-auto">
           Adamo
-          <span class="line"/>
+          <span class="line" />
         </span>
 
         <span class="text text-blue-800">
           Biuro rachunkowe
-          <span class="line"/>
+          <span class="line" />
         </span>
       </h1>
 

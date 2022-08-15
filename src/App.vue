@@ -4,7 +4,6 @@ import HeroHeader from "@/components/heroHeader/HeroHeader.vue";
 import AboutCompanySection from "@/components/aboutCompany/AboutCompany.vue";
 import ContactSection from "@/components/contact/Contact.vue";
 import OfferSection from "@/components/offer/Offer.vue";
-import SectionWrapper from "@/components/section/SectionWrapper.vue";
 import FooterSection from "@/components/footerSection/FooterSection.vue";
 import { NavId } from "@/components/topNav/TopNav.types";
 </script>
@@ -15,17 +14,17 @@ import { NavId } from "@/components/topNav/TopNav.types";
   <HeroHeader />
 
   <main>
-    <SectionWrapper :id="NavId.ABOUT">
+    <section class="section" :id="NavId.ABOUT">
       <AboutCompanySection />
-    </SectionWrapper>
+    </section>
 
-    <SectionWrapper :id="NavId.OFFER">
+    <section :id="NavId.OFFER">
       <OfferSection />
-    </SectionWrapper>
+    </section>
 
-    <SectionWrapper :id="NavId.CONTACT">
+    <section class="section" :id="NavId.CONTACT">
       <ContactSection />
-    </SectionWrapper>
+    </section>
   </main>
 
   <FooterSection />

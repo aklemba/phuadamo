@@ -8,10 +8,12 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prettier": "prettier --write .",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "sass": "^1.54.4",
     "vue": "^3.2.37"
   },

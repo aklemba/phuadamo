@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import TopNav from "@/components/topNav/TopNav.vue";
 import HeroHeader from "@/components/heroHeader/HeroHeader.vue";
-import AboutCompany from "@/components/aboutCompany/AboutCompany.vue";
-import Contact from "@/components/contact/Contact.vue";
-import Offer from "@/components/offer/Offer.vue";
+import AboutCompanySection from "@/components/aboutCompany/AboutCompany.vue";
+import ContactSection from "@/components/contact/Contact.vue";
+import OfferSection from "@/components/offer/Offer.vue";
+import FooterSection from "@/components/footerSection/FooterSection.vue";
 import { NavId } from "@/components/topNav/TopNav.types";
-import Section from "@/components/section/Section.vue";
 </script>
 
 <template>
@@ -14,18 +14,20 @@ import Section from "@/components/section/Section.vue";
   <HeroHeader />
 
   <main>
-    <Section :id="NavId.ABOUT">
-      <AboutCompany />
-    </Section>
+    <section class="section" :id="NavId.ABOUT">
+      <AboutCompanySection />
+    </section>
 
-    <Section :id="NavId.OFFER">
-      <Offer />
-    </Section>
+    <section :id="NavId.OFFER">
+      <OfferSection />
+    </section>
 
-    <Section :id="NavId.CONTACT">
-      <Contact />
-    </Section>
+    <section class="section" :id="NavId.CONTACT">
+      <ContactSection />
+    </section>
   </main>
+
+  <FooterSection />
 </template>
 
 <style scoped></style>

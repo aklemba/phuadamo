@@ -9,11 +9,13 @@ import { NavId } from "@/components/topNav/TopNav.types";
 
     <div class="header__content">
       <h1
-        class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start mb-4"
+        class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
-        <span class="text"> Adamo </span>
+        <span class="text text-center m-auto text--underline"> Adamo </span>
 
-        <span class="text text-blue-800"> Biuro rachunkowe </span>
+        <span class="text text--underline text-blue-800">
+          Biuro rachunkowe
+        </span>
       </h1>
 
       <p class="text-xl intro">Kompleksowa obsługa księgowa</p>
@@ -82,17 +84,17 @@ import { NavId } from "@/components/topNav/TopNav.types";
   position: relative;
   text-align: center;
 
-  /*&::after {
+  &--underline::after {
     content: "";
     position: absolute;
     border-radius: 0;
     left: 10px;
-    bottom: 0;
+    bottom: -2px;
     background: white;
     width: 100%;
-    height: 30px;
+    height: 20px;
     z-index: -1;
-  }*/
+  }
 }
 
 .intro {

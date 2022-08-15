@@ -4,25 +4,78 @@
   <div>
     <div>
       <header>
-        <span class="text-blue-800 font-bold mb-3 block">
+        <span class="text-blue-800 font-bold mb-1 block uppercase">
           Poznaj nas lepiej!
         </span>
 
         <h2 class="font-bold text-4xl mb-5">O firmie</h2>
       </header>
 
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor et
-        expedita itaque modi obcaecati quia quisquam sed soluta veritatis
-        voluptatibus. Amet animi corporis dolor dolore dolorem, quis saepe!
-        Consectetur, quas.
-      </div>
-    </div>
+      <div class="flex">
+        <div class="basis-6/12">
+          <p class="paragraph">
+            <b>PHU ADAMO</b> to biuro rachunkowe z wieloletnim doświadczneiem na rynku.
+          </p>
 
-    <div>
-      <img src="" alt="" />
+          <p class="paragraph">
+            Nasz zespół składa się z doświadczonych i wykwalifikowanych pracowników, rzetelnych i chętnych do pomocy w każdym przypadku.
+          </p>
+
+          <p class="paragraph">
+            Biuro znajduje się w Bełchowie i świadczy specjalistyczną obsługę rachunkowo-podatkową dla małych i średnich firm, a także dla jednoosobowych działalności gospodarczych.
+          </p>
+
+          <p class="paragraph">
+            Jeżeli interesuje Państwa nasza obsługa podatkowa i macie wobec niej i naszej działalności pytania, zapraszamy do kontaktu telefonicznego lub mailowego z naszym biurem.
+          </p>
+        </div>
+
+        <div class="img-wrapper basis-6/12">
+          <div class="img"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.paragraph {
+  margin-bottom: 1.5rem;
+  line-height: 1.6rem;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 45px;
+  background-image: url("./about.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  transform: translate3d(10rem, 2rem, 0);
+}
+
+.img-wrapper {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
+  }
+
+  &::before {
+    @apply border;
+    transform: translate3d(8rem, 0, 0);
+  }
+}
+</style>

@@ -4,9 +4,7 @@
   <footer class="footer">
     <div class="max-w-6xl m-auto flex flex-wrap flex-col">
       <div class="mb-4">
-        <span>Adamo</span>
-
-        <div>dsv</div>
+        <b>PHU Adamo</b>
       </div>
 
       <div>© PHU ADAMO Bożena Klemba - Wszelkie prawa zastrzeżone</div>

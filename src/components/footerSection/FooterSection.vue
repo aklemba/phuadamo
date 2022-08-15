@@ -2,12 +2,14 @@
 
 <template>
   <footer class="footer">
-    <div
-      class="max-w-6xl container flex flex-wrap justify-between items-center mx-auto"
-    >
-      <span>Adamo</span>
+    <div class="max-w-6xl m-auto flex flex-wrap flex-col">
+      <div class="mb-4">
+        <span>Adamo</span>
 
-      <div>dsv</div>
+        <div>dsv</div>
+      </div>
+
+      <div>© PHU ADAMO Bożena Klemba - Wszelkie prawa zastrzeżone</div>
     </div>
   </footer>
 </template>

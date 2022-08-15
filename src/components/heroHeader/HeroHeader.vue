@@ -9,17 +9,17 @@ import { NavId } from "@/components/topNav/TopNav.types";
 
     <div class="header__content">
       <h1
-        class="text-6xl text-gray-700 font-bold drop-shadow-lg mb-2 flex flex-col justify-items-start items-baseline"
+        class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start mb-4"
       >
         <span class="text"> Adamo </span>
 
         <span class="text text-blue-800"> Biuro rachunkowe </span>
       </h1>
 
-      <p class="mt-5 text-2xl mb-6 intro">Kompleksowa obsługa księgowa</p>
+      <p class="text-xl intro">Kompleksowa obsługa księgowa</p>
 
       <button
-        class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full w-44"
+        class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-1.5 px-4 rounded-full w-44"
         @click="scrollToElement(NavId.OFFER)"
       >
         Zobacz ofertę
@@ -38,7 +38,7 @@ import { NavId } from "@/components/topNav/TopNav.types";
   position: relative;
 
   &__content {
-    @apply flex flex-col justify-center h-full;
+    @apply flex flex-col h-full items-center;
     padding: 5rem;
   }
 }
@@ -49,25 +49,40 @@ import { NavId } from "@/components/topNav/TopNav.types";
   height: 100%;
   z-index: -1;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("./hero.jpg");
+    border-radius: 45px;
+  }
+
+  &::before {
+    background-image: url("./hero2.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.8;
-    border-radius: 45px;
+    opacity: 1;
+  }
+
+  &::after {
+    background: linear-gradient(
+      200deg,
+      rgba(200, 200, 200, 0.4) 10%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    // background: linear-gradient(125deg, rgba(249,200,59,0.15) 12%, rgba(255,255,255,0) 60%);
+    // background: linear-gradient(125deg, rgba(220,180,150,0.15) 12%, rgba(255,255,255,0) 60%);
   }
 }
 
 .text {
   text-shadow: -3px 0 white;
   position: relative;
+  text-align: center;
 
-  &::after {
+  /*&::after {
     content: "";
     position: absolute;
     border-radius: 0;
@@ -77,11 +92,12 @@ import { NavId } from "@/components/topNav/TopNav.types";
     width: 100%;
     height: 30px;
     z-index: -1;
-  }
+  }*/
 }
 
 .intro {
   text-shadow: 0 0 2px rgba(240, 240, 240, 0.8);
-  font-weight: 500;
+  font-weight: 400;
+  margin-bottom: 3rem;
 }
 </style>

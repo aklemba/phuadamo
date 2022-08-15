@@ -40,9 +40,9 @@ const offerBoxes: OfferItem[] = [
 <template>
   <div class="offer-section mx-auto max-w-7xl">
     <header class="text-center">
-      <span class="section-subtitle"> Sprawdź, co oferujemy! </span>
+      <span class="section-subtitle mb-4 text-xl"> Sprawdź, co oferujemy! </span>
 
-      <h2 class="section-title">Zakres usług</h2>
+      <h2 class="section-title text-5xl">Zakres usług</h2>
     </header>
 
     <ul class="flex flex-wrap content-between justify-between">

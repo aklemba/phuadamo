@@ -1,4 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const gs = gsap.to(".img", {
+    scrollTrigger: {
+      trigger: ".img",
+      start: "top 90%",
+      scrub: true,
+    },
+    y: -140,
+    ease: "none",
+  });
+
+  return () => {
+    gs.scrollTrigger?.kill();
+  };
+});
+</script>
 
 <template>
   <div>
@@ -60,7 +81,7 @@
   background-repeat: no-repeat;
   position: relative;
 
-  transform: translate3d(10rem, 2rem, 0);
+  transform: translate3d(10rem, 5rem, 0);
 }
 
 .img-wrapper {

@@ -1,6 +1,30 @@
 <script setup lang="ts">
 import { scrollToElement } from "@/utils/scrollTo";
 import { NavId } from "@/components/topNav/TopNav.types";
+
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const gs = gsap.to(".line", {
+    scrollTrigger: {
+      trigger: ".header",
+      start: "top 90px",
+      end: "top 70px",
+      scrub: true,
+    },
+    scaleX: 1.1,
+    scaleY: 2,
+    y: -10,
+    ease: "none",
+  });
+
+  return () => {
+    gs.scrollTrigger?.kill();
+  };
+});
 </script>
 
 <template>
@@ -11,10 +35,14 @@ import { NavId } from "@/components/topNav/TopNav.types";
       <h1
         class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
-        <span class="text text-center m-auto text--underline"> Adamo </span>
+        <span class="text text-center m-auto ">
+          Adamo
+          <span class="line"/>
+        </span>
 
-        <span class="text text--underline text-blue-800">
+        <span class="text text-blue-800">
           Biuro rachunkowe
+          <span class="line"/>
         </span>
       </h1>
 
@@ -84,7 +112,7 @@ import { NavId } from "@/components/topNav/TopNav.types";
   position: relative;
   text-align: center;
 
-  &--underline::after {
+  & .line {
     content: "";
     position: absolute;
     border-radius: 0;
@@ -92,8 +120,9 @@ import { NavId } from "@/components/topNav/TopNav.types";
     bottom: -2px;
     background: white;
     width: 100%;
-    height: 20px;
+    height: 16px;
     z-index: -1;
+    transition: transform ease 0.1s;
   }
 }
 

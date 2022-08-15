@@ -13,6 +13,7 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "sass": "^1.54.4",
     "vue": "^3.2.37"
   },

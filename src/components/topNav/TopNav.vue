@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { type NavItem, NavId } from "@/components/topNav/TopNav.types";
 import { ref, computed } from "vue";
+import { scrollToElement } from "@/utils/scrollTo";
 
 const isMobileMenuOpen = ref(false);
 const toggleButtonTitle = computed(() =>
@@ -9,6 +10,11 @@ const toggleButtonTitle = computed(() =>
 
 const toggle = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+
+const scrollTo = (event: Event, id?: string) => {
+  event.preventDefault();
+  scrollToElement(id);
 };
 
 const navItems: NavItem[] = [
@@ -34,7 +40,7 @@ const navItems: NavItem[] = [
     <div
       class="max-w-5xl container flex flex-wrap justify-between items-center mx-auto"
     >
-      <a href="/" class="flex items-center">
+      <a href="/#" class="flex items-center" @click="(ev) => scrollTo(ev)">
         <span
           class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
         >
@@ -80,6 +86,7 @@ const navItems: NavItem[] = [
             <a
               :href="'#' + navItem.href"
               class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              @click="(ev) => scrollTo(ev, navItem.href)"
             >
               {{ navItem.title }}
             </a>

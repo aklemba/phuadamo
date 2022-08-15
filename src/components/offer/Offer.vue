@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Usługi</div>
+  <div>Oferta</div>
 </template>
 
 <style scoped lang="scss"></style>

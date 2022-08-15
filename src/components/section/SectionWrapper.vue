@@ -7,9 +7,16 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section :id="props.id" class="max-w-6xl mx-auto">
+  <section :id="props.id" class="section">
     <slot />
   </section>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.section {
+  @apply max-w-6xl mx-auto border;
+  margin: 10rem auto;
+  padding: 5rem;
+  border-radius: 45px;
+}
+</style>

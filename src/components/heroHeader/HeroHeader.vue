@@ -13,7 +13,7 @@ onMounted(() => {
       trigger: ".header",
       start: "top 90px",
       end: "top 70px",
-      scrub: true,
+      scrub: 1,
     },
     scaleX: 1.1,
     scaleY: 2,

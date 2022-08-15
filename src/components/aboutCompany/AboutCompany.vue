@@ -9,7 +9,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: ".img",
       start: "top 90%",
-      scrub: true,
+      scrub: 1,
     },
     y: -140,
     ease: "none",

@@ -22,7 +22,7 @@ const offerBoxes: OfferItem[] = [
     name: "Usługi księgowe",
     icon: "",
     content:
-        "Prowadzenie ksiąg podatkowych, przygotowanie niezbędnych deklaracji podatkowych, deklaracje roczne",
+      "Prowadzenie ksiąg podatkowych, przygotowanie niezbędnych deklaracji podatkowych, deklaracje roczne",
   },
   {
     name: "Obsługa kadrowa",

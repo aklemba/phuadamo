@@ -90,7 +90,7 @@ onMounted(() => {
   }
 
   &::before {
-    background-image: url("./hero2.jpg");
+    background-image: url("./hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

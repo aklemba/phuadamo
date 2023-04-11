@@ -5,7 +5,7 @@
     <div class="max-w-6xl m-auto flex flex-wrap flex-col">
       <div class="lg:columns-3 mb-5">
         <div class="mb-4">
-          <b>PHU Adamo</b>
+          <b>PHU „ADAMO” Bożena Klemba</b>
         </div>
 
         <div class="mb-4">
@@ -15,14 +15,14 @@
         </div>
 
         <div>
-          <b>Przedsiębiorstwo handlowo-usługowe</b>
+          <b>NIP i REGON</b>
           <p>NIP: 8341046912</p>
-          <p>Nieborów</p>
+          <p>REGON: 750724585</p>
         </div>
       </div>
 
       <div>
-        <i>© PHU ADAMO Bożena Klemba - Wszelkie prawa zastrzeżone</i>
+        <i>© PHU „ADAMO” Bożena Klemba - Wszelkie prawa zastrzeżone</i>
       </div>
     </div>
   </footer>

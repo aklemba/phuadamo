@@ -2,10 +2,6 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
 ## Type Support for `.vue` Imports in TS
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
@@ -22,6 +18,8 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
+
+NPM version 14+
 
 ```sh
 npm install

@@ -6,5 +6,6 @@ export type NavItem = {
 export enum NavId {
   ABOUT = "about",
   OFFER = "offer",
+  PRICE_LIST = "price",
   CONTACT = "contact",
 }

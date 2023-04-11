@@ -5,71 +5,75 @@ const offerBoxes: OfferItem[] = [
   {
     name: "Usługi księgowe",
     icon: "",
-    content:
-      "Prowadzenie ksiąg podatkowych, przygotowanie niezbędnych deklaracji podatkowych, deklaracje roczne",
   },
   {
-    name: "Obsługa kadrowa",
+    name: "Kadry i płace",
     icon: "",
-    content: "Administrowanie kadrami i płacami",
   },
   {
-    name: "Doradztwo gospodarcze",
+    name: "Konsultacje",
     icon: "",
-    content: "Zakładanie, przekształcanie, prowadzenie działalności",
-  },
-  {
-    name: "Usługi księgowe",
-    icon: "",
-    content:
-      "Prowadzenie ksiąg podatkowych, przygotowanie niezbędnych deklaracji podatkowych, deklaracje roczne",
-  },
-  {
-    name: "Obsługa kadrowa",
-    icon: "",
-    content: "Administrowanie kadrami i płacami",
-  },
-  {
-    name: "Doradztwo gospodarcze",
-    icon: "",
-    content: "Zakładanie, przekształcanie, prowadzenie działalności",
   },
 ];
 </script>
 
 <template>
-  <div class="offer-section mx-auto max-w-7xl">
+  <div class="mx-auto max-w-7xl">
     <header class="text-center">
-      <span class="section-subtitle mb-4 text-xl"> Sprawdź, co oferujemy! </span>
+        <span class="section-subtitle mb-4 text-xl">
+          Sprawdź, co oferujemy!
+        </span>
 
-      <h2 class="section-title text-5xl">Zakres usług</h2>
+      <h2 class="section-title text-5xl mb-6">Zakres usług</h2>
     </header>
 
-    <ul class="flex flex-wrap content-between justify-between">
-      <li
-        v-for="offerBox in offerBoxes"
-        :key="offerBox.name"
-        class="offerBox flex-1"
-      >
-        <div class="border-b mb-2">
-          <span class="font-semibold">
+    <div>
+      <ul class="mt-4 list list-disc ml-4.5 mb-5">
+        <li
+            v-for="offerBox in offerBoxes"
+            :key="offerBox.name"
+            class="mb-1"
+        >
+          <span class="font-semibold text-center">
             {{ offerBox.name }}
           </span>
-        </div>
+        </li>
+      </ul>
 
-        <div>
-          <p>
-            {{ offerBox.content }}
-          </p>
-        </div>
-      </li>
-    </ul>
+      <p class="paragraph">
+        Oferujemy pełen zakres usług rachunkowych, prowadzenie dokumentacji
+        kadrowo-płacowej oraz innych usług uzgodnionych z klientem.
+      </p>
+
+      <p class="paragraph">
+        Zapewniamy konsultacje na każdym etapie współpracy.
+      </p>
+
+      <p class="paragraph">
+        Pomagamy <b>bezpłatnie</b> przy przy założeniu własnej działalności.
+      </p>
+
+      <p class="paragraph">
+        Korzystamy z nowoczesnych narzędzi ułatwiających współpracę z klientem.
+      </p>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .offer-section {
   padding: 6rem 0;
+}
+
+.paragraph {
+  @apply text-gray-700;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+}
+
+.wrapper {
+  @apply border basis-full bg-white m-2;
+  border-radius: 20px;
 }
 
 .offerBox {

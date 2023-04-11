@@ -6,6 +6,7 @@ import ContactSection from "@/components/contact/Contact.vue";
 import OfferSection from "@/components/offer/Offer.vue";
 import FooterSection from "@/components/footerSection/FooterSection.vue";
 import { NavId } from "@/components/topNav/TopNav.types";
+import PriceListSection from "@/components/priceList/PriceList.vue";
 </script>
 
 <template>
@@ -18,8 +19,12 @@ import { NavId } from "@/components/topNav/TopNav.types";
       <AboutCompanySection />
     </section>
 
-    <section :id="NavId.OFFER">
+    <section class="section" :id="NavId.OFFER">
       <OfferSection />
+    </section>
+
+    <section class="section" :id="NavId.PRICE_LIST">
+      <PriceListSection />
     </section>
 
     <section class="section" :id="NavId.CONTACT">

@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { NavId } from "@/components/topNav/TopNav.types";
 import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import {scrollToElement} from "@/utils/scrollTo";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
@@ -19,6 +21,11 @@ onMounted(() => {
     gs.scrollTrigger?.kill();
   };
 });
+
+const scrollTo = (event: Event, id?: string) => {
+  event.preventDefault();
+  scrollToElement(id);
+};
 </script>
 
 <template>
@@ -33,25 +40,25 @@ onMounted(() => {
       <div class="flex">
         <div class="basis-6/12">
           <p class="paragraph">
-            <b>PHU ADAMO</b> to biuro rachunkowe z wieloletnim doświadczeniem na
-            rynku.
+            Biuro Rachunkowe <b>ADAMO</b> istnieje na rynku od 2011 roku.
           </p>
 
           <p class="paragraph">
-            Nasz zespół składa się z doświadczonych i wykwalifikowanych
-            pracowników, rzetelnych i chętnych do pomocy w każdym przypadku.
+            Biuro znajduje się w Bełchowie i świadczy kompleksową obsługę
+            rachunkową dla osób prowadzących jednoosobową działalność
+            gospodarczą oraz dla mikro i małych firm z wielu różnych branż.
           </p>
 
-          <p class="paragraph">
-            Biuro znajduje się w Bełchowie i świadczy specjalistyczną obsługę
-            rachunkowo-podatkową dla małych i średnich firm, a także dla
-            jednoosobowych działalności gospodarczych.
-          </p>
+          <p class="paragraph">Stale rozszerzamy naszą działalność.</p>
+
+          <p class="paragraph">Zapraszamy do współpracy nowych klientów.</p>
 
           <p class="paragraph">
-            Jeżeli interesuje Państwa nasza obsługa podatkowa i macie wobec niej
-            i naszej działalności pytania, zapraszamy do kontaktu telefonicznego
-            lub mailowego z naszym biurem.
+            Prosimy o
+            <button
+              class="text-blue-700 hover:text-blue-900 focus:text-blue-900 focus:outline-none"
+              @click="(ev) => scrollTo(ev, NavId.CONTACT)">kontakt</button>
+            telefoniczny, mailowy lub osobisty.
           </p>
         </div>
 

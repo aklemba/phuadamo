@@ -37,7 +37,7 @@ onMounted(() => {
         class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
         <span class="text text-center m-auto">
-          Adamo
+          ADAMO
           <span class="line" />
         </span>
 

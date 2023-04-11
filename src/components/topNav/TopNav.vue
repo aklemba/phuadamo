@@ -42,7 +42,7 @@ const navItems: NavItem[] = [
     >
       <a href="/#" class="flex items-center" @click="(ev) => scrollTo(ev)">
         <span class="self-center text-xl font-semibold whitespace-nowrap">
-          Adamo
+          ADAMO
         </span>
       </a>
 

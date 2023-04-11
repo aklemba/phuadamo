@@ -33,25 +33,24 @@ onMounted(() => {
       <div class="flex">
         <div class="basis-6/12">
           <p class="paragraph">
-            <b>PHU ADAMO</b> to biuro rachunkowe z wieloletnim doświadczeniem na
-            rynku.
+            Biuro Rachunkowe <b>ADAMO</b> istnieje na rynku od 2011 roku.
           </p>
 
           <p class="paragraph">
-            Nasz zespół składa się z doświadczonych i wykwalifikowanych
-            pracowników, rzetelnych i chętnych do pomocy w każdym przypadku.
+            Biuro znajduje się w Bełchowie i świadczy kompleksową obsługę rachunkową dla osób prowadzących
+            jednoosobową działalność gospodarczą oraz dla mikro i małych firm z wielu różnych branż.
           </p>
 
           <p class="paragraph">
-            Biuro znajduje się w Bełchowie i świadczy specjalistyczną obsługę
-            rachunkowo-podatkową dla małych i średnich firm, a także dla
-            jednoosobowych działalności gospodarczych.
+            Stale rozszerzamy naszą działalność.
           </p>
 
           <p class="paragraph">
-            Jeżeli interesuje Państwa nasza obsługa podatkowa i macie wobec niej
-            i naszej działalności pytania, zapraszamy do kontaktu telefonicznego
-            lub mailowego z naszym biurem.
+            Zapraszamy do współpracy nowych klientów.
+          </p>
+
+          <p class="paragraph">
+            Prosimy o kontakt telefoniczny, mailowy lub osobisty.
           </p>
         </div>
 

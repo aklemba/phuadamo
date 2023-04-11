@@ -15,9 +15,8 @@
         </div>
 
         <div>
-          <b>NIP i REGON</b>
-          <p>NIP: 8341046912</p>
-          <p>REGON: 750724585</p>
+          <p><b>NIP</b>: 8341046912</p>
+          <p><b>REGON</b>: 750724585</p>
         </div>
       </div>
 

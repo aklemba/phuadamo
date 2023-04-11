@@ -5,6 +5,8 @@
 <template>
   <div class="flex">
     <header class="flex-1 text-center">
+      <span class="section-subtitle text-left"> Sprawdź nasze ceny! </span>
+
       <h2 class="section-title text-5xl text-left">Cennik</h2>
     </header>
 

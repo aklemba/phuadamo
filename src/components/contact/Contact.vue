@@ -17,7 +17,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
 
         <div class="item">
           <img src="./icons/phone.svg" alt="" />
-          <a href="tel:+604493830" class="link">604 493 830</a>
+          <a href="tel:+604493830" class="link focus:outline-none focus:text-green-800">604 493 830</a>
         </div>
 
         <div class="item">
@@ -26,7 +26,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
             href="https://goo.gl/maps/fE1Lq2YLJM3HWFjHA"
             target="_blank"
             rel="noopener noreferrer"
-            class="link"
+            class="link focus:outline-none focus:text-green-800"
           >
             Polna 14, 99-418 Bełchów
           </a>

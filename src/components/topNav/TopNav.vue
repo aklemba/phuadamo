@@ -44,7 +44,7 @@ const navItems: NavItem[] = [
     <div
       class="max-w-5xl container flex flex-wrap justify-between items-center mx-auto px-2"
     >
-      <a href="/#" class="flex items-center" @click="(ev) => scrollTo(ev)">
+      <a href="/#" class="flex items-center focus:outline-none" @click="(ev) => scrollTo(ev)">
         <span class="self-center text-xl font-semibold whitespace-nowrap">
           ADAMO
         </span>
@@ -87,7 +87,7 @@ const navItems: NavItem[] = [
           <li v-for="navItem in navItems" :key="navItem.href">
             <a
               :href="'#' + navItem.href"
-              class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-800 md:py-0"
+              class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-800 md:py-0 focus:outline-none focus:bg-gray-100 md:focus:bg-transparent md:focus:text-green-700 focus:underline-none"
               @click="(ev) => scrollTo(ev, navItem.href)"
             >
               {{ navItem.title }}

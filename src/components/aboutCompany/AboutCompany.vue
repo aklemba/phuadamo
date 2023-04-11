@@ -56,7 +56,7 @@ const scrollTo = (event: Event, id?: string) => {
           <p class="paragraph">
             Prosimy o
             <button
-              class="text-blue-800"
+              class="text-blue-700 hover:text-blue-900 focus:text-blue-900 focus:outline-none"
               @click="(ev) => scrollTo(ev, NavId.CONTACT)">kontakt</button>
             telefoniczny, mailowy lub osobisty.
           </p>

@@ -80,7 +80,7 @@ const resize = () => {
 
     <div class="md:flex md:items-center">
       <button
-        class="button bg-blue-700 hover:bg-blue-900 text-white font-bold py-1.5 px-4 rounded-full w-44 float-right ml-auto"
+        class="button bg-green-700 hover:bg-green-900 text-white font-bold py-1.5 px-4 rounded-full w-44 float-right ml-auto"
         type="submit"
       >
         <img src="./icons/email.svg" alt="" />

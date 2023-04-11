@@ -27,6 +27,10 @@ const navItems: NavItem[] = [
     href: NavId.OFFER,
   },
   {
+    title: "Cennik",
+    href: NavId.PRICE_LIST,
+  },
+  {
     title: "Kontakt",
     href: NavId.CONTACT,
   },
@@ -83,7 +87,7 @@ const navItems: NavItem[] = [
           <li v-for="navItem in navItems" :key="navItem.href">
             <a
               :href="'#' + navItem.href"
-              class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:py-0"
+              class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-800 md:py-0"
               @click="(ev) => scrollTo(ev, navItem.href)"
             >
               {{ navItem.title }}

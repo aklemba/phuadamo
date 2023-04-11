@@ -64,6 +64,6 @@ import ContactForm from "@/components/contact/ContactForm.vue";
 }
 
 .link {
-  @apply text-base text-gray-800 rounded hover:text-blue-800;
+  @apply text-base text-gray-800 rounded hover:text-green-800;
 }
 </style>

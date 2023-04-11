@@ -41,7 +41,7 @@ onMounted(() => {
           <span class="line" />
         </span>
 
-        <span class="text text-blue-800">
+        <span class="text text-green-800">
           Biuro rachunkowe
           <span class="line" />
         </span>
@@ -50,7 +50,7 @@ onMounted(() => {
       <p class="text-xl intro">Kompleksowa obsługa księgowa</p>
 
       <button
-        class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-1.5 px-4 rounded-full w-44"
+        class="bg-green-700 hover:bg-green-900 text-white font-bold py-1.5 px-4 rounded-full w-44"
         @click="scrollToElement(NavId.OFFER)"
       >
         Zobacz ofertę

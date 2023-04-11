@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { NavId } from "@/components/topNav/TopNav.types";
 import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import {scrollToElement} from "@/utils/scrollTo";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
@@ -19,6 +21,11 @@ onMounted(() => {
     gs.scrollTrigger?.kill();
   };
 });
+
+const scrollTo = (event: Event, id?: string) => {
+  event.preventDefault();
+  scrollToElement(id);
+};
 </script>
 
 <template>
@@ -37,20 +44,21 @@ onMounted(() => {
           </p>
 
           <p class="paragraph">
-            Biuro znajduje się w Bełchowie i świadczy kompleksową obsługę rachunkową dla osób prowadzących
-            jednoosobową działalność gospodarczą oraz dla mikro i małych firm z wielu różnych branż.
+            Biuro znajduje się w Bełchowie i świadczy kompleksową obsługę
+            rachunkową dla osób prowadzących jednoosobową działalność
+            gospodarczą oraz dla mikro i małych firm z wielu różnych branż.
           </p>
 
-          <p class="paragraph">
-            Stale rozszerzamy naszą działalność.
-          </p>
+          <p class="paragraph">Stale rozszerzamy naszą działalność.</p>
+
+          <p class="paragraph">Zapraszamy do współpracy nowych klientów.</p>
 
           <p class="paragraph">
-            Zapraszamy do współpracy nowych klientów.
-          </p>
-
-          <p class="paragraph">
-            Prosimy o kontakt telefoniczny, mailowy lub osobisty.
+            Prosimy o
+            <button
+              class="text-blue-800"
+              @click="(ev) => scrollTo(ev, NavId.CONTACT)">kontakt</button>
+            telefoniczny, mailowy lub osobisty.
           </p>
         </div>
 

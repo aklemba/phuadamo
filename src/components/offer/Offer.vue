@@ -17,23 +17,7 @@ const offerBoxes: OfferItem[] = [
     name: "Doradztwo gospodarcze",
     icon: "",
     content: "Zakładanie, przekształcanie, prowadzenie działalności",
-  },
-  {
-    name: "Usługi księgowe",
-    icon: "",
-    content:
-      "Prowadzenie ksiąg podatkowych, przygotowanie niezbędnych deklaracji podatkowych, deklaracje roczne",
-  },
-  {
-    name: "Obsługa kadrowa",
-    icon: "",
-    content: "Administrowanie kadrami i płacami",
-  },
-  {
-    name: "Doradztwo gospodarcze",
-    icon: "",
-    content: "Zakładanie, przekształcanie, prowadzenie działalności",
-  },
+  }
 ];
 </script>
 

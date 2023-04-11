@@ -3,7 +3,7 @@
 
 import { ref } from "vue";
 
-const RECEIVER_EMAIL_ADDRESS = "adamo.biurorachunkowe@gmail.com";
+const RECEIVER_EMAIL_ADDRESS = "phuadamo@wp.pl";
 
 const textarea = ref<HTMLTextAreaElement | null>(null);
 

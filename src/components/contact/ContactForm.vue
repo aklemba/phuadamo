@@ -8,9 +8,9 @@ const RECEIVER_EMAIL_ADDRESS = "phuadamo@wp.pl";
 const textarea = ref<HTMLTextAreaElement | null>(null);
 
 const resize = () => {
-  console.log({ textarea });
   if (textarea.value) {
-    // textarea.value.style.height = textarea.value.scrollHeight + "px";
+    textarea.value.style.height = "auto";
+    textarea.value.style.height = textarea.value.scrollHeight + 8 + "px";
   }
 };
 </script>
@@ -58,6 +58,7 @@ const resize = () => {
         >
           Wiadomość
         </label>
+
         <textarea
           class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-2 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
           id="message"

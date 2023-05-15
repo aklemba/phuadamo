@@ -44,6 +44,10 @@ const scrollTo = (event: Event, id?: string) => {
       <div class="flex">
         <div class="basis-12/12 md:basis-6/12">
           <p class="paragraph">
+            Kompleksowe biuro rachunkowe. Obsługa rachunkowo-podatkowa dla mikro, małych, średnich firm oraz JDG. Bełchów, łódzkie i okolice: Skierniewice, Łowicz, Łyszkowice, Nieborów, Żyrardów.
+          </p>
+
+          <p class="paragraph">
             Biuro Rachunkowe <b>ADAMO</b> istnieje na rynku od 2011 roku.
           </p>
 
@@ -82,6 +86,13 @@ const scrollTo = (event: Event, id?: string) => {
   @apply text-gray-700;
   margin-bottom: 1.5rem;
   line-height: 1.6rem;
+
+  &:first-of-type { // hidden first paragraph for seo
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
 }
 
 .img {

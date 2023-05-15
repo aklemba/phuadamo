@@ -7,7 +7,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
     <!--    <p class="section-subtitle">Chcesz nawiązać współpracę?</p>-->
     <p class="section-subtitle">Masz pytania?</p>
 
-    <h2 class="section-title">Skontaktuj się z nami!</h2>
+    <h2 class="section-title">Skontaktuj się z nami!</h2>
   </header>
 
   <div class="flex flex-wrap">

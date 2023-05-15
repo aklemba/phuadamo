@@ -9,22 +9,26 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  const gs = gsap.to(".line", {
-    scrollTrigger: {
-      trigger: ".header",
-      start: "top 90px",
-      end: "top 70px",
-      scrub: 1,
-    },
-    scaleX: 1.1,
-    scaleY: 2,
-    y: -10,
-    ease: "none",
-  });
+  ScrollTrigger.matchMedia({
+    "screen and (min-width: 72rem)": function () {
+      const gs = gsap.to(".line", {
+        scrollTrigger: {
+          trigger: ".header",
+          start: "top 90px",
+          end: "top 70px",
+          scrub: 1,
+        },
+        scaleX: 1.1,
+        scaleY: 2,
+        y: -10,
+        ease: "none",
+      });
 
-  return () => {
-    gs.scrollTrigger?.kill();
-  };
+      return () => {
+        gs.scrollTrigger?.kill();
+      };
+    }
+  })
 });
 </script>
 

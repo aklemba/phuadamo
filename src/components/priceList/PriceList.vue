@@ -5,20 +5,24 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  gsap.set(".priceListImg", { backgroundPosition: "100% center" });
-  const gs = gsap.to(".priceListImg", {
-    scrollTrigger: {
-      trigger: ".priceListImg-imgWrapper",
-      start: "top 90%",
-      scrub: 0,
-    },
-    backgroundPosition: "0% center",
-    ease: "none",
-  });
+  ScrollTrigger.matchMedia({
+    "screen and (min-width: 72rem)": function () {
+      gsap.set(".priceListImg", { backgroundPosition: "100% center" });
+      const gs = gsap.to(".priceListImg", {
+        scrollTrigger: {
+          trigger: ".priceListImg-imgWrapper",
+          start: "top 90%",
+          scrub: 0,
+        },
+        backgroundPosition: "0% center",
+        ease: "none",
+      });
 
-  return () => {
-    gs.scrollTrigger?.kill();
-  };
+      return () => {
+        gs.scrollTrigger?.kill();
+      };
+    }
+  });
 });
 </script>
 
@@ -51,6 +55,10 @@ onMounted(() => {
   width: 120px;
   height: 90px;
   border-radius: 45px 0;
+
+  @media (max-width: 71.99rem) {
+    display: none;
+  }
 }
 
 .priceListImg {

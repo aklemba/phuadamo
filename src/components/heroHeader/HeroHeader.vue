@@ -34,9 +34,9 @@ onMounted(() => {
 
     <div class="header__content">
       <h1
-        class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
+        class="text-4xl md:text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
-        <span class="text text-center m-auto text-green-800">
+        <span class="text text-center m-auto text-green-800 mb-1 md:mb-0">
           ADAMO
           <span class="line" />
         </span>
@@ -143,5 +143,6 @@ onMounted(() => {
   text-shadow: 0 0 2px rgba(240, 240, 240, 0.8);
   font-weight: 400;
   margin-bottom: 3rem;
+  text-align: center;
 }
 </style>

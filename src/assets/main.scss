@@ -5,9 +5,15 @@
 @layer components {
   .section {
     @apply max-w-6xl mx-auto border bg-white;
-    margin: 8rem auto;
-    padding: 5rem;
-    border-radius: 45px;
+    margin: 1.5rem;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+
+    @media (min-width: 72rem) {
+      margin: 8rem auto;
+      padding: 5rem;
+      border-radius: 45px;
+    }
   }
 
   .section-title {
@@ -21,4 +27,5 @@
 
 body {
   @apply bg-stone-50;
+  overflow-x: hidden;
 }

@@ -14,6 +14,7 @@ const toggle = () => {
 
 const scrollTo = (event: Event, id?: string) => {
   event.preventDefault();
+  toggle();
   scrollToElement(id);
 };
 
@@ -77,17 +78,17 @@ const navItems: NavItem[] = [
       </div>
 
       <div
-        class="justify-between items-center w-full md:flex md:w-auto md:order-1 ml-auto"
-        :class="isMobileMenuOpen ? 'flex' : 'hidden'"
+        class="justify-between md:items-center w-full md:flex md:w-auto md:order-1 ml-auto"
+        :class="isMobileMenuOpen ? 'flex h-screen md:h-full' : 'hidden'"
         id="navbar-sticky"
       >
         <ul
-          class="flex flex-col p-2 mt-2 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white"
+          class="flex flex-col divide-y divide-gray-200 w-full md:divide-none p-2 mt-2 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
         >
-          <li v-for="navItem in navItems" :key="navItem.href">
+          <li v-for="navItem in navItems" :key="navItem.href" class="">
             <a
               :href="'#' + navItem.href"
-              class="block text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-800 md:py-0 focus:outline-none focus:bg-gray-100 md:focus:bg-transparent md:focus:text-green-700 focus:underline-none"
+              class="block text-lg md:text-base py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-800 md:py-0 focus:outline-none focus:bg-gray-100 md:focus:bg-transparent md:focus:text-green-700 focus:underline-none"
               @click="(ev) => scrollTo(ev, navItem.href)"
             >
               {{ navItem.title }}

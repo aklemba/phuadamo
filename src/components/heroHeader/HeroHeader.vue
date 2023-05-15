@@ -27,8 +27,8 @@ onMounted(() => {
       return () => {
         gs.scrollTrigger?.kill();
       };
-    }
-  })
+    },
+  });
 });
 </script>
 

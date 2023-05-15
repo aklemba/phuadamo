@@ -14,8 +14,10 @@ const toggle = () => {
 
 const scrollTo = (event: Event, id?: string) => {
   event.preventDefault();
-  toggle();
-  scrollToElement(id);
+  scrollToElement(id, isMobileMenuOpen.value);
+  if (isMobileMenuOpen.value) {
+    toggle();
+  }
 };
 
 const navItems: NavItem[] = [

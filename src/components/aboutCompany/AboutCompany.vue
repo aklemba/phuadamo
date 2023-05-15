@@ -92,6 +92,7 @@ const scrollTo = (event: Event, id?: string) => {
     height: 0;
     width: 0;
     overflow: hidden;
+    margin-top: -1.5rem;
   }
 }
 

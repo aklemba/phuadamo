@@ -50,7 +50,7 @@ const offerBoxes: OfferItem[] = [
       </p>
 
       <p class="paragraph">
-        Pomagamy <b>bezpłatnie</b> przy przy założeniu własnej działalności.
+        Pomagamy <b>bezpłatnie</b> przy założeniu własnej działalności.
       </p>
 
       <p class="paragraph">

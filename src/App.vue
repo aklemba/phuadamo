@@ -42,7 +42,6 @@ import PriceListSection from "@/components/priceList/PriceList.vue";
 <style scoped lang="scss">
 .img-wrapper {
   height: max-content;
-  position: relative;
 
   @media (min-width: 72rem) {
     display: none;

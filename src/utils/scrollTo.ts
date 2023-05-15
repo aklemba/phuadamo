@@ -3,7 +3,7 @@ export const scrollToElement = (id?: string, mobile?: boolean) => {
     const element = document.querySelector("#" + id);
 
     if (element) {
-      let offset = mobile ? -5 : -120; // px (top-bar + spacing)
+      let offset = mobile ? -78 : -120; // px (top-bar + spacing)
       if (mobile) offset -= window.innerHeight;
       const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
 

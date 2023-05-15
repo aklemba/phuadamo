@@ -19,10 +19,6 @@ import PriceListSection from "@/components/priceList/PriceList.vue";
       <AboutCompanySection />
     </section>
 
-    <div class="img-wrapper">
-      <div class="img"></div>
-    </div>
-
     <section class="section" :id="NavId.OFFER">
       <OfferSection />
     </section>
@@ -40,21 +36,4 @@ import PriceListSection from "@/components/priceList/PriceList.vue";
 </template>
 
 <style scoped lang="scss">
-.img-wrapper {
-  height: max-content;
-
-  @media (min-width: 72rem) {
-    display: none;
-  }
-}
-
-.img {
-  background-image: url("./components/aboutCompany/about.jpg");
-  width: 100%;
-  min-height: 10rem;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100vw;
-}
 </style>

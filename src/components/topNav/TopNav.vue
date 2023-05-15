@@ -45,7 +45,11 @@ const navItems: NavItem[] = [
     <div
       class="max-w-5xl container flex flex-wrap justify-between items-center mx-auto px-2"
     >
-      <a href="/#" class="flex items-center focus:outline-none" @click="(ev) => scrollTo(ev)">
+      <a
+        href="/#"
+        class="flex items-center focus:outline-none"
+        @click="(ev) => scrollTo(ev)"
+      >
         <span class="self-center text-xl font-semibold whitespace-nowrap">
           ADAMO
         </span>

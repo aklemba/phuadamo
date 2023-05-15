@@ -17,7 +17,11 @@ import ContactForm from "@/components/contact/ContactForm.vue";
 
         <div class="item">
           <img src="./icons/phone.svg" alt="" />
-          <a href="tel:+604493830" class="link focus:outline-none focus:text-green-800">604 493 830</a>
+          <a
+            href="tel:+604493830"
+            class="link focus:outline-none focus:text-green-800"
+            >604 493 830</a
+          >
         </div>
 
         <div class="item">

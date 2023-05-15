@@ -3,7 +3,7 @@ import { NavId } from "@/components/topNav/TopNav.types";
 import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {scrollToElement} from "@/utils/scrollTo";
+import { scrollToElement } from "@/utils/scrollTo";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
@@ -61,7 +61,10 @@ const scrollTo = (event: Event, id?: string) => {
             Prosimy o
             <button
               class="text-blue-700 hover:text-blue-900 focus:text-blue-900 focus:outline-none"
-              @click="(ev) => scrollTo(ev, NavId.CONTACT)">kontakt</button>
+              @click="(ev) => scrollTo(ev, NavId.CONTACT)"
+            >
+              kontakt
+            </button>
             telefoniczny, mailowy lub osobisty.
           </p>
         </div>

@@ -20,20 +20,16 @@ const offerBoxes: OfferItem[] = [
 <template>
   <div class="mx-auto max-w-7xl">
     <header class="text-center">
-        <span class="section-subtitle mb-4 text-xl">
-          Sprawdź, co oferujemy!
-        </span>
+      <span class="section-subtitle mb-4 text-xl">
+        Sprawdź, co oferujemy!
+      </span>
 
       <h2 class="section-title text-5xl mb-6">Zakres usług</h2>
     </header>
 
     <div>
       <ul class="mt-4 list list-disc ml-4.5 mb-5">
-        <li
-            v-for="offerBox in offerBoxes"
-            :key="offerBox.name"
-            class="mb-1"
-        >
+        <li v-for="offerBox in offerBoxes" :key="offerBox.name" class="mb-1">
           <span class="font-semibold text-center">
             {{ offerBox.name }}
           </span>

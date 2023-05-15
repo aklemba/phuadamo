@@ -40,7 +40,10 @@ onMounted(() => {
 
     <div class="basis-full md:basis-8/12 mb-1">
       <p>
-        Ceny oferowanych usług ustalamy indywidualnie dla każdego Klienta na podstawie przewidywanej liczby dokumentów, liczby zatrudnionych pracowników, formy opodatkowania, na podstawie indywidulanych oczekiwań i potrzeb Klienta oraz przewidywanego czasu wykonania zleconych usług.
+        Ceny oferowanych usług ustalamy indywidualnie dla każdego Klienta na
+        podstawie przewidywanej liczby dokumentów, liczby zatrudnionych
+        pracowników, formy opodatkowania, na podstawie indywidulanych oczekiwań
+        i potrzeb Klienta oraz przewidywanego czasu wykonania zleconych usług.
       </p>
     </div>
   </div>

@@ -7,7 +7,7 @@ import ContactForm from "@/components/contact/ContactForm.vue";
     <!--    <p class="section-subtitle">Chcesz nawiązać współpracę?</p>-->
     <p class="section-subtitle">Masz pytania?</p>
 
-    <h2 class="section-title">Skontaktuj się z nami!</h2>
+    <h2 class="section-title">Skontaktuj się z nami!</h2>
   </header>
 
   <div class="flex flex-wrap">
@@ -17,7 +17,11 @@ import ContactForm from "@/components/contact/ContactForm.vue";
 
         <div class="item">
           <img src="./icons/phone.svg" alt="" />
-          <a href="tel:+604493830" class="link focus:outline-none focus:text-green-800">604 493 830</a>
+          <a
+            href="tel:+604493830"
+            class="link focus:outline-none focus:text-green-800"
+            >604 493 830</a
+          >
         </div>
 
         <div class="item">

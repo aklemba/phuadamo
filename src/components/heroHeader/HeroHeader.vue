@@ -9,22 +9,26 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  const gs = gsap.to(".line", {
-    scrollTrigger: {
-      trigger: ".header",
-      start: "top 90px",
-      end: "top 70px",
-      scrub: 1,
-    },
-    scaleX: 1.1,
-    scaleY: 2,
-    y: -10,
-    ease: "none",
-  });
+  ScrollTrigger.matchMedia({
+    "screen and (min-width: 72rem)": function () {
+      const gs = gsap.to(".line", {
+        scrollTrigger: {
+          trigger: ".header",
+          start: "top 90px",
+          end: "top 70px",
+          scrub: 1,
+        },
+        scaleX: 1.1,
+        scaleY: 2,
+        y: -10,
+        ease: "none",
+      });
 
-  return () => {
-    gs.scrollTrigger?.kill();
-  };
+      return () => {
+        gs.scrollTrigger?.kill();
+      };
+    },
+  });
 });
 </script>
 
@@ -34,9 +38,9 @@ onMounted(() => {
 
     <div class="header__content">
       <h1
-        class="text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
+        class="text-4xl md:text-5xl text-gray-700 font-bold drop-shadow-lg flex flex-col justify-items-start items-baseline mb-4"
       >
-        <span class="text text-center m-auto text-green-800">
+        <span class="text text-center m-auto text-green-800 mb-1 md:mb-0">
           ADAMO
           <span class="line" />
         </span>
@@ -62,15 +66,22 @@ onMounted(() => {
 <style scoped lang="scss">
 .header {
   @apply max-w-6xl mx-auto w-full bg-cover bg-center;
-  border-radius: 45px;
-  margin: 4rem auto;
   width: 100%;
   height: calc(100vh - 72px - 8rem);
   position: relative;
 
   &__content {
     @apply flex flex-col h-full items-center;
-    padding: 5rem;
+    padding: 3rem 1rem;
+  }
+
+  @media (min-width: 72rem) {
+    margin: 4rem auto;
+    border-radius: 45px;
+
+    &__content {
+      padding: 5rem;
+    }
   }
 }
 
@@ -86,7 +97,10 @@ onMounted(() => {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 45px;
+
+    @media (min-width: 72rem) {
+      border-radius: 45px;
+    }
   }
 
   &::before {
@@ -113,17 +127,19 @@ onMounted(() => {
   position: relative;
   text-align: center;
 
-  & .line {
-    content: "";
-    position: absolute;
-    border-radius: 0;
-    left: 10px;
-    bottom: -2px;
-    background: white;
-    width: 100%;
-    height: 16px;
-    z-index: -1;
-    transition: transform ease 0.1s;
+  @media (min-width: 72rem) {
+    & .line {
+      content: "";
+      position: absolute;
+      border-radius: 0;
+      left: 10px;
+      bottom: -2px;
+      background: white;
+      width: 100%;
+      height: 16px;
+      z-index: -1;
+      transition: transform ease 0.1s;
+    }
   }
 }
 
@@ -131,5 +147,6 @@ onMounted(() => {
   text-shadow: 0 0 2px rgba(240, 240, 240, 0.8);
   font-weight: 400;
   margin-bottom: 3rem;
+  text-align: center;
 }
 </style>

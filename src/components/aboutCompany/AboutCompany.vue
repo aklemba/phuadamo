@@ -3,23 +3,27 @@ import { NavId } from "@/components/topNav/TopNav.types";
 import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {scrollToElement} from "@/utils/scrollTo";
+import { scrollToElement } from "@/utils/scrollTo";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  const gs = gsap.to(".img", {
-    scrollTrigger: {
-      trigger: ".img",
-      start: "top 90%",
-      scrub: 1,
-    },
-    y: -140,
-    ease: "none",
-  });
+  ScrollTrigger.matchMedia({
+    "screen and (min-width: 72rem)": function () {
+      const gs = gsap.to(".img", {
+        scrollTrigger: {
+          trigger: ".img",
+          start: "top 90%",
+          scrub: 1,
+        },
+        y: -140,
+        ease: "none",
+      });
 
-  return () => {
-    gs.scrollTrigger?.kill();
-  };
+      return () => {
+        gs.scrollTrigger?.kill();
+      };
+    },
+  });
 });
 
 const scrollTo = (event: Event, id?: string) => {
@@ -38,7 +42,7 @@ const scrollTo = (event: Event, id?: string) => {
       </header>
 
       <div class="flex">
-        <div class="basis-6/12">
+        <div class="basis-12/12 md:basis-6/12">
           <p class="paragraph">
             Biuro Rachunkowe <b>ADAMO</b> istnieje na rynku od 2011 roku.
           </p>
@@ -57,7 +61,10 @@ const scrollTo = (event: Event, id?: string) => {
             Prosimy o
             <button
               class="text-blue-700 hover:text-blue-900 focus:text-blue-900 focus:outline-none"
-              @click="(ev) => scrollTo(ev, NavId.CONTACT)">kontakt</button>
+              @click="(ev) => scrollTo(ev, NavId.CONTACT)"
+            >
+              kontakt
+            </button>
             telefoniczny, mailowy lub osobisty.
           </p>
         </div>
@@ -92,6 +99,10 @@ const scrollTo = (event: Event, id?: string) => {
 }
 
 .img-wrapper {
+  @media (max-width: 71.99rem) {
+    display: none;
+  }
+
   position: relative;
 
   &::after,

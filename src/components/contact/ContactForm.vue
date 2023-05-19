@@ -10,7 +10,7 @@ const RECEIVER_EMAIL_ADDRESS = "phuadamo@wp.pl";
 const textarea = ref<HTMLTextAreaElement | null>(null);
 
 const hrefLocation = window?.location?.href;
-const successUrl = "success";
+const successUrl = "?success";
 const successPageUrl = hrefLocation.endsWith("/")
   ? hrefLocation + successUrl
   : hrefLocation + "/" + successUrl;

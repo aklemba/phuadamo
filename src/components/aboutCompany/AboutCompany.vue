@@ -29,7 +29,9 @@ onMounted(() => {
   });
 
   setTimeout(() => {
-    firstParagraph?._rawValue?.classList?.add('hi-paragraph')
+    if (firstParagraph && firstParagraph._rawValue && firstParagraph._rawValue.classList) {
+      firstParagraph?._rawValue?.classList?.add('hi-paragraph')
+    }
   });
 });
 

@@ -1,4 +1,8 @@
-export const scrollToElement = (id?: string, mobile?: boolean) => {
+export const scrollToElement = (
+  id?: string,
+  behavior: ScrollBehavior = "smooth",
+  mobile?: boolean
+) => {
   if (id) {
     const element = document.querySelector("#" + id);
 
@@ -10,7 +14,7 @@ export const scrollToElement = (id?: string, mobile?: boolean) => {
       window.scrollTo({
         top: y,
         left: 0,
-        behavior: "smooth",
+        behavior: behavior,
       });
     }
   } else {
@@ -18,7 +22,7 @@ export const scrollToElement = (id?: string, mobile?: boolean) => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: behavior,
     });
   }
 };

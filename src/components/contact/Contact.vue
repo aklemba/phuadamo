@@ -47,8 +47,6 @@ import ContactForm from "@/components/contact/ContactForm.vue";
     </div>
 
     <div class="basis-full md:basis-8/12">
-      <p class="title mb-2">Napisz</p>
-
       <ContactForm />
     </div>
   </div>

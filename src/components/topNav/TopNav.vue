@@ -14,7 +14,7 @@ const toggle = () => {
 
 const scrollTo = (event: Event, id?: string) => {
   event.preventDefault();
-  scrollToElement(id, isMobileMenuOpen.value);
+  scrollToElement(id, "smooth", isMobileMenuOpen.value);
   if (isMobileMenuOpen.value) {
     toggle();
   }

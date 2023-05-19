@@ -5,7 +5,7 @@ import { onMounted, ref } from "vue";
 import { scrollToElement } from "@/utils/scrollTo";
 import { NavId } from "@/components/topNav/TopNav.types";
 
-const RECEIVER_EMAIL_ADDRESS = "adamo.biurorachunkowe@gmail.com";
+const RECEIVER_EMAIL_ADDRESS = "phuadamo@wp.pl";
 
 const textarea = ref<HTMLTextAreaElement | null>(null);
 

@@ -5,6 +5,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { scrollToElement } from "@/utils/scrollTo";
 gsap.registerPlugin(ScrollTrigger);
+import { ref } from "vue";
+
+const firstParagraph = ref<HTMLParagraphElement | null>(null);
 
 onMounted(() => {
   ScrollTrigger.matchMedia({
@@ -23,6 +26,10 @@ onMounted(() => {
         gs.scrollTrigger?.kill();
       };
     },
+  });
+
+  setTimeout(() => {
+    firstParagraph?._rawValue?.classList?.add('hi-paragraph')
   });
 });
 
@@ -43,8 +50,8 @@ const scrollTo = (event: Event, id?: string) => {
 
       <div class="flex">
         <div class="basis-12/12 md:basis-6/12">
-          <p class="paragraph">
-            Kompleksowe biuro rachunkowe. Obsługa rachunkowo-podatkowa dla mikro, małych, średnich firm oraz JDG. Bełchów, łódzkie i okolice: Skierniewice, Łowicz, Łyszkowice, Nieborów, Żyrardów.
+          <p ref="firstParagraph" class="paragraph">
+            Kompleksowe obsługa księgowa dla mikro, małych, średnich firm oraz JDG. Bełchów, łódzkie i okolice: Skierniewice, Łowicz, Łyszkowice, Nieborów, Żyrardów.
           </p>
 
           <p class="paragraph">
@@ -86,14 +93,14 @@ const scrollTo = (event: Event, id?: string) => {
   @apply text-gray-700;
   margin-bottom: 1.5rem;
   line-height: 1.6rem;
+}
 
-  &:first-of-type { // hidden first paragraph for seo
-    opacity: 0;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    margin-top: -1.5rem;
-  }
+.hi-paragraph {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  margin-top: -1.5rem;
 }
 
 .img {

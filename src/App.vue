@@ -35,5 +35,4 @@ import PriceListSection from "@/components/priceList/PriceList.vue";
   <FooterSection />
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

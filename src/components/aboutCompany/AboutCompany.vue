@@ -4,8 +4,9 @@ import { onMounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { scrollToElement } from "@/utils/scrollTo";
-gsap.registerPlugin(ScrollTrigger);
 import { ref } from "vue";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const firstParagraph = ref<HTMLParagraphElement | null>(null);
 
@@ -29,8 +30,8 @@ onMounted(() => {
   });
 
   setTimeout(() => {
-    if (firstParagraph && firstParagraph._rawValue && firstParagraph._rawValue.classList) {
-      firstParagraph?._rawValue?.classList?.add('hi-paragraph')
+    if (firstParagraph.value) {
+      firstParagraph.value.classList.add("hi-paragraph");
     }
   });
 });
@@ -53,7 +54,9 @@ const scrollTo = (event: Event, id?: string) => {
       <div class="flex">
         <div class="basis-12/12 md:basis-6/12">
           <p ref="firstParagraph" class="paragraph">
-            Kompleksowe obsługa księgowa dla mikro, małych, średnich firm oraz JDG. Bełchów, łódzkie i okolice: Skierniewice, Łowicz, Łyszkowice, Nieborów, Żyrardów.
+            Kompleksowe obsługa księgowa dla mikro, małych, średnich firm oraz
+            JDG. Bełchów, łódzkie i okolice: Skierniewice, Łowicz, Łyszkowice,
+            Nieborów, Żyrardów.
           </p>
 
           <p class="paragraph">
